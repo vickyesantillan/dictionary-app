@@ -20,27 +20,35 @@ def prod_vect(A, B):
     return axb
 
 
+def ingresar_vector(A=str):
+
+    A1 = []
+
+    input_user1 = input(
+        'Ingrese vector %s en el siguiente formato a,b,c: ' % A)
+    A1 = input_user1.split(',')
+    return A1
+
+
 A = []
 B = []
 
-input_user1 = input('Ingrese vector A en el siguiente formato a,b,c: ')
-A1 = input_user1.split(',')
+A1 = ingresar_vector('A')
 
 while len(A1) != 3:
     print('El formato de vector no es el requerido, intentalo de nuevo')
-    input_user1 = input('Ingrese vector A en el siguiente formato a,b,c: ')
-    A1 = input_user1.split(',')
+    A1 = ingresar_vector('A')
 
-input_user2 = input('Ingrese vector B en el siguiente formato d,e,f: ')
-B1 = input_user2.split(',')
-
+B1 = ingresar_vector('B')
 while len(B1) != 3:
     print('El formato de vector no es el requerido, intentalo de nuevo')
-    input_user2 = input('Ingrese vector A en el siguiente formato d,e,f: ')
-    B1 = input_user2.split(',')
+    B1 = ingresar_vector('B')
 
 for i in A1:
-    A.append(float(i))
+    if isinstance(float(i), float):
+        A.append(float(i))
+    else:
+        print('No ingreso un valor valido, debe ingresar numeros, comience de nuevo:')
 
 for i in B1:
     B.append(float(i))
