@@ -9,13 +9,15 @@ windows = Tk()
 
 
 def convert():
-
+    pounds1.delete("1.0", END)  # Deleting the old value
     pounds = float(kg_value.get()) * 2.20462
     pounds1.insert(END, pounds)
 
+    grams1.delete("1.0", END)  # Deleting the old value
     grams = float(kg_value.get()) * 1000
     grams1.insert(END, grams)
 
+    ounces1.delete("1.0", END)  # Deleting the old value
     ounces = float(kg_value.get()) * 35.274
     ounces1.insert(END, ounces)
 
