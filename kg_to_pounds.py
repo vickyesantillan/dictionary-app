@@ -33,19 +33,32 @@ kg = Entry(windows, textvariable=kg_value)
 kg.grid(row=0, column=1)
 
 # Kg label
-Kg_label = Label(windows, text="Kg")
+Kg_label = Label(windows, text="Kg-->")
 Kg_label.grid(row=0, column=0)
+
+# grams label
+grams_label = Label(windows, text="Grams")
+grams_label.grid(row=1, column=0)
+
+# pounds label
+pounds_label = Label(windows, text="Pounds")
+pounds_label.grid(row=1, column=1)
+
+# ounces label
+ounces_label = Label(windows, text="Ounces")
+ounces_label.grid(row=1, column=2)
+
 
 # Converts results
 
 grams1 = Text(windows, height=1, width=20)
-grams1.grid(row=1, column=0)
+grams1.grid(row=2, column=0)
 
 pounds1 = Text(windows, height=1, width=20)
-pounds1.grid(row=1, column=1)
+pounds1.grid(row=2, column=1)
 
 ounces1 = Text(windows, height=1, width=20)
-ounces1.grid(row=1, column=2)
+ounces1.grid(row=2, column=2)
 
 
 windows.mainloop()
