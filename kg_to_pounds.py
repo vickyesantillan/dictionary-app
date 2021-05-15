@@ -3,22 +3,25 @@
 
 from tkinter import *
 
+# Create a Tinker windows
+
 windows = Tk()
 
 # Convert Function
 
 
 def convert():
+
     pounds1.delete("1.0", END)  # Deleting the old value
-    pounds = float(kg_value.get()) * 2.20462
+    pounds = round(float(kg_value.get()) * 2.20462, 2)
     pounds1.insert(END, pounds)
 
     grams1.delete("1.0", END)  # Deleting the old value
-    grams = float(kg_value.get()) * 1000
+    grams = round(float(kg_value.get()) * 1000, 2)
     grams1.insert(END, grams)
 
     ounces1.delete("1.0", END)  # Deleting the old value
-    ounces = float(kg_value.get()) * 35.274
+    ounces = round(float(kg_value.get()) * 35.274, 2)
     ounces1.insert(END, ounces)
 
 # Convert botton
@@ -33,7 +36,7 @@ kg = Entry(windows, textvariable=kg_value)
 kg.grid(row=0, column=1)
 
 # Kg label
-Kg_label = Label(windows, text="Kg-->")
+Kg_label = Label(windows, text="Kg➡")
 Kg_label.grid(row=0, column=0)
 
 # grams label
